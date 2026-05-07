@@ -1,4 +1,4 @@
-package net.bahou.net.bahou.ext;
+package net.bahou.ext;
 
 import net.bahou.dao.IDao;
 

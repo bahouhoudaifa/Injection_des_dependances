@@ -1,0 +1,2 @@
+net.bahou.ext.DaoImpl2
+net.bahou.metier.MetierImpl
