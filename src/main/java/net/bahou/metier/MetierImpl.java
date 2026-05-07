@@ -2,15 +2,16 @@ package net.bahou.metier;
 
 import net.bahou.dao.IDao;
 
-public class IMetierImpl implements IMetier {
+public class MetierImpl implements IMetier {
     private IDao dao;
 
     // Injection de dépendance via le constructeur pour injecter dans
     // l'attribuft dao une instance d'une classe qui implémente l'interface IDao
 
-    public IMetierImpl(IDao dao){
+    public MetierImpl(IDao dao){
         this.dao = dao;
     }
+    public MetierImpl(){}
 
 
     @Override
@@ -18,5 +19,9 @@ public class IMetierImpl implements IMetier {
         double t = dao.getData();
         double res = t * 12;
         return res;
+    }
+
+    public void setDao(IDao dao) {
+        this.dao = dao;
     }
 }
