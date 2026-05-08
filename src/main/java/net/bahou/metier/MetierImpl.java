@@ -1,17 +1,21 @@
 package net.bahou.metier;
 
 import net.bahou.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class MetierImpl implements IMetier {
     private IDao dao;
 
     // Injection de dépendance via le constructeur pour injecter dans
     // l'attribuft dao une instance d'une classe qui implémente l'interface IDao
 
-    public MetierImpl(IDao dao){
+    public MetierImpl(@Qualifier("d") IDao dao){
         this.dao = dao;
     }
-    public MetierImpl(){}
+    //public MetierImpl(){}
 
 
     @Override
